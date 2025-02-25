@@ -18,7 +18,7 @@
 # permissions and limitations under the Licence.
 # 
 
-import httpx
+import requests
 
 from common.vault.vault_exception import VaultClientError
 from common.vault.vault_exception import VaultClientException
@@ -36,7 +36,7 @@ class VaultClient:
 
     def get_from_vault(self, srv_namespace: str) -> dict:
         # fetch Vault stored configurations
-        vault_gotten = httpx.get(self.vault_service, verify=self.vault_crt, headers=self.vault_headers)
+        vault_gotten = requests.get(self.vault_service, verify=self.vault_crt, headers=self.vault_headers)
         if vault_gotten.status_code != 200:
             raise VaultClientException(VaultClientError.CONNECT_ERROR)
 
