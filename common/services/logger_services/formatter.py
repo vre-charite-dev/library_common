@@ -1,6 +1,5 @@
 from pythonjsonlogger import jsonlogger
 from .namespace_declare import service_namespace
-import datetime
 
 class CustomJsonFormatter(jsonlogger.JsonFormatter):
     def add_fields(self, log_record, record, message_dict):

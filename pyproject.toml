@@ -8,9 +8,6 @@ packages = [{include = "common"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-python-dotenv = "0.19.1"
-httpx = "0.22.0"
-pydantic = "1.8.2"
 requests = "2.26.0"
 
 
