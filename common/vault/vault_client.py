@@ -1,7 +1,5 @@
 import requests
 from common.services.logger_services.logger_factory_service import SrvLoggerFactory
-from common.config import ConfigClass
-from common.models.config_center_policy import ConfigCenterPolicy
 from common.vault.vault_exception import VaultClientException, VaultClientError
 
 class VaultClient():
