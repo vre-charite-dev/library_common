@@ -9,6 +9,8 @@ on:
 jobs:
   call-commit-lint-workflow:
     uses: vre-charite-dev/quickstart/.github/workflows/commit-lint.yaml@main
+    permissions:
+      contents: read
 
   call-release-workflow:
     needs: call-commit-lint-workflow
