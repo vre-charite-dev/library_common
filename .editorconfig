@@ -1,0 +1,28 @@
+
+root = true
+
+# default rules for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# rules for programming languages
+[*.{java,js,ts,css,scss,html,xml,py}]
+indent_style = space
+indent_size = 4
+
+# handle json and yaml differently
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# true markdown files use trailing whitespaces for linebreak rendering
+# we can't trimm them
+[*.md]
+trim_trailing_whitespace = false
+
+# makefiles use tabs
+[Makefile]
+indent_style = tab
